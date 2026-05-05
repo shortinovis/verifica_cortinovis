@@ -6,11 +6,11 @@ require_once 'visualizzazione.php';
 
 
 if (isset($_POST['nuovo_iscritto'])) {
-    ::create($conn, $_POST['t'], $_POST[''], $_POST[''], $_POST['']);
+    iscrizioni_corsi::create($conn, $_POST['id_iscrizione'], $_POST['id_corso'], $_POST['id_memebro'], $_POST['data_iscrizione'], $_POST['orario_preferito']);
 }
 
 if (isset($_POST['visualizzare_corsi'])) {
-    ::create($conn, $_POST['l'], $_POST['utente']);
+    ::create($conn, $_GET['id_corso'], $_GET['nome_corso'], $_GET['livello_difficoltà'], $_GET['durata_minuti'], $_GET['id_istruttore']);
 }
 
 
